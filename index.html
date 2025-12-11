@@ -144,22 +144,23 @@
     
     /* MAIN BANNER */
     .main-banner {
-      min-height: 500px;
+      min-height: 450px;
       background: #000;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem 4rem;
+      padding: 2rem 3rem;
       margin-top: 105px;
       position: relative;
-      gap: 2rem;
-      max-width: 1600px;
+      gap: 1rem;
+      max-width: 1500px;
       margin-left: auto;
       margin-right: auto;
+      overflow: hidden;
     }
     .banner-content {
       flex: 0 0 auto;
-      max-width: 550px;
+      max-width: 500px;
       text-align: left;
       z-index: 2;
     }
@@ -169,12 +170,13 @@
       align-items: center;
       justify-content: flex-end;
       position: relative;
+      min-width: 0;
     }
     .banner-image img {
-      width: 100%;
+      width: 950px;
       height: auto;
-      max-width: 800px;
       object-fit: contain;
+      transform: scale(1.1);
     }
     .banner-kicker {
       color: #ff0000;
