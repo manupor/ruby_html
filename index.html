@@ -405,11 +405,21 @@
       align-items: flex-start;
       justify-content: center;
       gap: 2rem;
-      max-width: 1400px;
+      max-width: 1600px;
       margin: 0 auto;
+      position: relative;
     }
     .casino-main {
       flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .promo-banner-left {
+      flex-shrink: 0;
+    }
+    .promo-banner-right {
+      flex-shrink: 0;
     }
     
     /* VERTICAL PROMO BANNERS */
@@ -561,7 +571,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 0.8rem;
       max-width: 750px;
-      margin: 1rem auto 0;
+      margin: 0;
       width: fit-content;
     }
     .game-item {
@@ -1087,7 +1097,7 @@
     <h2 class="section-title">Casino Games</h2>
     <div class="casino-content-wrapper">
       <!-- Left Promo Banner -->
-      <div class="promo-banner-vertical">
+      <div class="promo-banner-vertical promo-banner-left">
         <div class="promo-image">
           <img src="promo-left.jpg" alt="Welcome Bonus" style="display: none;">
           <!-- Placeholder for image -->
@@ -1160,7 +1170,7 @@
       </div>
       
       <!-- Right Promo Banner -->
-      <div class="promo-banner-vertical">
+      <div class="promo-banner-vertical promo-banner-right">
         <div class="promo-image">
           <img src="promo-right.jpg" alt="Crypto Bonus" style="display: none;">
           <!-- Placeholder for image -->
