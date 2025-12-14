@@ -402,33 +402,37 @@
     }
     .casino-content-wrapper {
       display: grid;
-      grid-template-columns: 180px 1fr 180px;
+      grid-template-columns: 170px repeat(3, 200px) 170px;
       gap: 1rem;
-      max-width: 1300px;
+      max-width: 1200px;
       margin: 0 auto;
       align-items: center;
-      justify-items: center;
-      width: 100%;
+      justify-content: center;
     }
     .casino-main {
-      width: 100%;
-      max-width: 750px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: contents;
     }
     .promo-banner-left {
-      justify-self: end;
+      grid-column: 1;
+      grid-row: 1 / span 3;
       align-self: center;
     }
     .promo-banner-right {
-      justify-self: start;
+      grid-column: 5;
+      grid-row: 1 / span 3;
       align-self: center;
+    }
+    .games-gallery {
+      grid-column: 2 / 5;
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      gap: 1rem;
+      margin: 0;
     }
     
     /* VERTICAL PROMO BANNERS */
     .promo-banner-vertical {
-      width: 180px;
+      width: 170px;
       height: 580px;
       background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(40, 0, 0, 0.95) 100%);
       border: 2px solid rgba(255, 0, 0, 0.3);
@@ -570,19 +574,11 @@
       color: rgba(255, 255, 255, 0.6);
       font-size: 0.9rem;
     }
-    .games-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.8rem;
-      max-width: 750px;
-      margin: 0;
-      width: fit-content;
-    }
     .game-item {
       position: relative;
       aspect-ratio: 1;
-      width: 100%;
-      max-width: 220px;
+      width: 200px;
+      height: 200px;
       border-radius: 12px;
       overflow: hidden;
       cursor: pointer;
