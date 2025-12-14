@@ -401,35 +401,26 @@
       position: relative;
     }
     .casino-content-wrapper {
-      display: grid;
-      grid-template-columns: 200px 1fr 200px;
-      gap: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
       max-width: 1400px;
       margin: 0 auto;
-      align-items: center;
     }
     .casino-main {
-      width: 100%;
       display: flex;
       justify-content: center;
     }
-    .promo-banner-left {
-      width: 200px;
-      justify-self: end;
-      align-self: center;
-    }
+    .promo-banner-left,
     .promo-banner-right {
       width: 200px;
-      justify-self: start;
-      margin-left: 3rem;
-      align-self: center;
+      flex-shrink: 0;
     }
     .games-gallery {
       display: grid;
       grid-template-columns: repeat(3, 200px);
       gap: 1rem;
-      margin: 0;
-      justify-content: center;
     }
     
     /* VERTICAL PROMO BANNERS */
