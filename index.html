@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="preload" href="hero1.jpg" as="image" fetchpriority="high">
   <style>
     :root {
       --ruby: #ff0000;
@@ -910,50 +911,22 @@
         font-size: 0.75rem;
       }
       .main-banner {
-        min-height: 60vh;
+        min-height: auto;
         padding: 3rem 1.5rem;
         margin-top: 90px;
         flex-direction: column;
         gap: 0;
         justify-content: center;
-        position: relative;
-        overflow: visible;
-      }
-      .main-banner::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.95) 70%, #000 100%);
-        z-index: 1;
+        align-items: center;
+        background: linear-gradient(180deg, #1a0000 0%, #000 100%);
+        background-image: none;
       }
       .banner-content {
         text-align: center;
         max-width: 100%;
-        position: relative;
-        z-index: 2;
       }
       .banner-image {
-        position: absolute;
-        top: 20%;
-        right: -10%;
-        width: 80%;
-        height: 70%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
-        z-index: 0;
-        overflow: visible;
-      }
-      .banner-image img {
-        width: 100%;
-        height: auto;
-        max-width: 500px;
-        object-fit: contain;
-        object-position: top right;
-        opacity: 0.4;
+        display: none;
       }
       .hero-badge {
         display: none;
@@ -1151,16 +1124,13 @@
     /* RESPONSIVE - SMALL MOBILE */
     @media (max-width: 480px) {
       .main-banner {
-        min-height: 350px;
-        padding: 1.5rem;
-        background-size: cover;
-        background-position: 70% center;
+        padding: 2rem 1rem;
       }
       .banner-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
       .banner-content p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
       }
       .promo-banner-vertical {
         max-width: 100%;
