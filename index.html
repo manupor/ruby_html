@@ -410,6 +410,10 @@
       overflow: hidden;
     }
     
+    .hero-mobile-container {
+      display: none;
+    }
+    
     .hero-background-img {
       width: 100%;
       height: auto;
@@ -1948,17 +1952,24 @@
         display: block;
       }
       .header-buttons {
-        gap: 0.4rem;
+        gap: 0.5rem;
+        align-items: center;
       }
       .btn {
-        padding: 0.5rem 0.6rem;
-        font-size: 0.65rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.7rem;
         border-radius: 20px;
-        width: 80px;
         white-space: nowrap;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .header-buttons {
-        gap: 0.4rem;
+      .btn-outline {
+        width: 65px;
+      }
+      .btn-primary {
+        width: 80px;
       }
       
       /* Hero - Mobile with Background Image */
@@ -2104,6 +2115,7 @@
       /* Ligas Section */
       .ligas-section {
         padding: 0.5rem 0 0.25rem;
+        margin-top: 0;
       }
       .leagues-wrapper {
         padding: 0;
@@ -2182,30 +2194,41 @@
         transform: scale(1.08);
       }
       
-      .hero-desktop-container .join-now-stack {
+      .hero-desktop-container {
         display: none;
       }
       
-      .join-now-mobile {
-        display: flex;
-        position: absolute;
-        left: 50%;
-        bottom: calc(15vh + 40px);
-        transform: translateX(-50%);
-        width: 80vw;
-        max-width: 500px;
-        align-items: center;
-        animation: pulse 2s ease-in-out infinite;
-        box-shadow: none !important;
+      .hero-mobile-container {
+        display: block;
+        position: relative;
+        width: 100%;
       }
       
-      .btn-join-now-overlay {
-        width: auto;
-        font-size: clamp(1.2rem, 5vw, 1.6rem);
-        padding: 0.85rem 2.5rem;
-        letter-spacing: 0.12em;
-        border-radius: 50px;
-        box-shadow: none !important;
+      .hero-mobile-container .hero-mobile-img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .join-now-mobile {
+        position: absolute;
+        bottom: 5%;
+        left: 48%;
+        transform: translateX(-50%);
+        width: 70%;
+        max-width: 340px;
+        min-width: 240px;
+        display: flex;
+        justify-content: center;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      .join-now-mobile .btn-join-now-overlay {
+        width: 100%;
+        font-size: clamp(1.6rem, 6.5vw, 2.4rem);
+        padding: clamp(0.9rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 3rem);
+        letter-spacing: 0.1em;
+        border-radius: 15px;
       }
       
       .main-banner {
@@ -2214,10 +2237,11 @@
         background: #000000;
         width: 100vw;
         position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        left: 53%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-right: 0;
+        overflow: hidden;
       }
 
       .banner-content-new {
@@ -2906,20 +2930,10 @@
     </div>
     
     <!-- Mobile Hero -->
-    <img src="main banner mobile.png" alt="Ruby Wager Mobile" class="hero-mobile-img">
-    <div class="banner-content-new">
-      <div class="hero-mobile-content">
-        <p class="hero-mobile-eyebrow">SIGN-UP BONUS</p>
-        <p class="hero-mobile-percent">200%</p>
-        <p class="hero-mobile-subtitle">CRYPTO FRIENDLY</p>
-        <p class="hero-mobile-tagline">Wherever You Are, The Action Follows.</p>
-        <div class="hero-mobile-pills">
-          <span class="hero-mobile-pill">Same-Day Payouts</span>
-          <span class="hero-mobile-pill">Cryptofriendly</span>
-        </div>
-      </div>
-      <div class="join-now-stack join-now-mobile">
-        <button class="btn-join-now-overlay"  onclick="openAuthModal('register')">JOIN NOW</button>
+    <div class="hero-mobile-container">
+      <img src="main banner mobile.png" alt="Ruby Wager Mobile" class="hero-mobile-img">
+      <div class="join-now-mobile">
+        <button class="btn-join-now-overlay" onclick="openAuthModal('register')">JOIN NOW</button>
       </div>
     </div>
   </section>
