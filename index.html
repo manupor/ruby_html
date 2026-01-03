@@ -579,12 +579,13 @@
 
     .btn-join-now-overlay {
       width: 100%;
-      font-family: Impact, 'Arial Black', 'Helvetica Inserat', sans-serif !important;
+      font-family: Impact, 'Arial Black', 'Haettenschweiler', sans-serif !important;
       font-size: clamp(1.5rem, 3vw, 45px);
       font-weight: 900 !important;
+      -webkit-text-stroke: 0.5px white;
       padding: clamp(0.7rem, 1.6vw, 1rem) clamp(2.2rem, 4.5vw, 4.5rem);
       border-radius: 20px;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       line-height: 1.2;
       background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
       border: 3px solid #ffffff;
@@ -1702,7 +1703,7 @@
       line-height: 1.7;
     }
     .faq-answer.active {
-      max-height: 500px;
+      max-height: 2000px;
       padding-bottom: 1.5rem;
     }
     
@@ -2900,7 +2901,7 @@
     <div class="hero-desktop-container">
       <img src="banner desktop.png" alt="" class="hero-background-img">
       <div class="join-now-stack">
-        <button class="btn-join-now-overlay" onclick="openAuthModal('register')">JOIN NOW</button>
+        <button class="btn-join-now-overlay"  onclick="openAuthModal('register')">JOIN NOW</button>
       </div>
     </div>
     
@@ -2918,7 +2919,7 @@
         </div>
       </div>
       <div class="join-now-stack join-now-mobile">
-        <button class="btn-join-now-overlay" onclick="openAuthModal('register')">JOIN NOW</button>
+        <button class="btn-join-now-overlay"  onclick="openAuthModal('register')">JOIN NOW</button>
       </div>
     </div>
   </section>
